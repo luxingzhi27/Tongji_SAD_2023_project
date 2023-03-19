@@ -10,11 +10,11 @@
 
 ## 1.项目背景
 
-随着数字化时代的到来，现代社会的生活节奏越来越快，许多人们面临着时间管理的挑战。他们或是苦于在快节奏的生活中，很容易陷入时间不够用的困境,又或是苦于无法良好的约束自己，自律自己的生活，又或是无法在一个时间段内全身心投入，总是被其他的事情所分心。我们需要一款可以帮助人们更好地安排时间，提高生产力，减轻压力，实现个人目标的工具。
+​		随着数字化时代的到来，现代社会的生活节奏越来越快，许多人们面临着时间管理的挑战。他们或是苦于在快节奏的生活中，很容易陷入时间不够用的困境,又或是苦于无法良好的约束自己，自律自己的生活，又或是无法在一个时间段内全身心投入，总是被其他的事情所分心。我们需要一款可以帮助人们更好地安排时间，提高生产力，减轻压力，实现个人目标的工具。
 
-与此同时,我们也注意到在最近的互联网平台上，有一种新型的直播方式正在兴起——线上自习室,线上自习室的火热也反映出当代人们需要陪伴，需要监督的心理。
+​		与此同时,我们也注意到在最近的互联网平台上，有一种新型的直播方式正在兴起——线上自习室,线上自习室的火热也反映出当代人们需要陪伴，需要监督的心理。
 
-自律，专注，时间管理，社交，这一切似乎可以有机结合起来，打造一款为个人学习全方面提供舒适服务的产品。
+​		自律，专注，时间管理，社交，这一切似乎可以有机结合起来，打造一款为个人学习全方面提供舒适服务的产品。
 
 ## 2.项目目标
 
@@ -75,3 +75,45 @@
 10. Offer social accountability: Consider implementing features that allow users to hold each other accountable for their concentration goals. For example, users could set goals with their friends and check in with each other periodically to see how they're doing.
 
 11. Design a visually appealing interface: A visually appealing interface can make your app more attractive to users and encourage them to use it regularly. Consider using calming colors and clean, minimalist design to create a sense of focus and relaxation.
+
+## 5.notes on existing similar products
+
+1. Forest: 拥有深度专注功能，界面简洁，易上手，专注时种树的构思较为巧妙，不过功能较为单一，社交属性较弱
+
+2. 水球清单:任务清单式软件，简洁美观的UI，功能较单一，不能详细地以时间轴方式展示一天的任务
+
+3. 滴答清单:功能完善，拥有日历表、收集箱等模式，不过相应的上手难度略大、略向庞大
+
+## 6.novelty of my solution and enhancements suggested 
+
+1. 引入任务共享模式，让有经验的人为无从下手的新手制定计划
+2. 引入社交属性，可以为用户匹配学习规划、学习目标相近的人，使之在共同专注模式下拥有陪伴感且能相互督促
+3. 引入游戏中的任务成就模式，统计实时的碎片化奖励，且能够以此来获取成就，这种成就感、历练感将激励用户
+4. 引入极简思想，当今互联网上很多产品十分庞大且功能复杂，这样不仅让用户难以上手且会使得产品及其冗杂，缺乏产品的准确定位，如专注于信息交互的软件却要引入直播、短视频等娱乐模式，并且各色图标眼花缭乱，难以使人静下心来。故本项目致力于打造界面简洁，易于上手，单调而不失风格的自律型软件
+
+## 7.team organization and preliminary project planning
+
+to be planned
+
+## 8.engineering process and methodologies
+
+I don't know.
+
+## 9.team collaboration platforms or systems
+
+Web+Android?
+
+## 10.potential for further development
+
+接入chatGPT帮助用户规划
+
+## 11.related technologies (platform, languages, libraries, tools, etc.)
+
+？no idea
+
+## 12.challenges that you think you may encounter during the project’s development
+
++ 如何使用数据库存储、提供用户信息
++ UI设计的学习
++ 各平台兼容的实现
++ 奖励模式的设计
