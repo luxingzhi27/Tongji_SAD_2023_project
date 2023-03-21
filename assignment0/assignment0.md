@@ -32,11 +32,13 @@
   - 提供专注的功能，使用专注功能帮助用户专注一段用户所设定的时间
   - 提供日程规划功能，可以方便的规划未来一段时间的日程
   - 提供打卡与成就功能，激励用户自律
+  - 提供进度跟踪，允许用户跟踪一段时间内的工作进度，来激励用户继续专注并提高效率。
 - 社交
   - 可以分享自己的日程表，找到与你兴趣，生活规划相似的朋友
   - 能够创建简单的交流社区,让兴趣相似的用户可以相互交流
-  - 提供互相监督功能，好友间可以互相监督对方的专注程度
-  - ...  
+  - 提供互相监督功能，好友间可以互相监督对方的专注程度，用户可以与朋友一起设定目标，并定期相互检查以了解他们的表现。
+  - 提供挑战和奖励机制，可以为自己设定目标挑战完成同时给予一定的反馈激励
+  - 提供私聊功能，允许用户一对一相互交流，沟通心得
 
 ### 3.2 主要特点
 
@@ -54,29 +56,7 @@
 - 社区管理员：
   提供完整的社区管理方法，能够安排社区活动，管理社区风气
 
-1. Keep it simple: Focus on providing a simple and easy-to-use interface for social communication, so that users can easily connect with each other.
-
-2. Use messaging features: Consider incorporating messaging features into your app to allow users to chat with each other in real-time. Make sure to provide a way for users to mute or turn off notifications if they want to focus on their work.
-
-3. Create interest-based groups: Allow users to join groups based on their interests, hobbies, or work-related topics. This can help users find like-minded individuals to connect with and discuss topics that interest them.
-
-4. Enable private messaging: Allow users to send private messages to each other, so they can communicate one-on-one without the need for a group chat.
-
-5. Provide feedback and support: Consider adding features that allow users to provide feedback and support to each other. This can help foster a sense of community and make users feel more connected to each other.
-
-6. Create a virtual study space: Consider creating a virtual study space where users can gather to focus and concentrate. This space can be designed to mimic a real-life study environment, with features like ambient noise, white noise, or background music to help users focus.
-
-7. Use the Pomodoro Technique: The Pomodoro Technique is a time management method that breaks work into intervals, typically 25 minutes in length, separated by short breaks. Consider incorporating this technique into your app, so users can work together in focused bursts.
-
-8.  Offer challenges and rewards: To keep users motivated and engaged, consider offering challenges and rewards for achieving concentration goals. For example, users could earn badges or points for completing a certain number of Pomodoro sessions in a day.
-
-9.  Provide progress tracking: Allow users to track their progress over time, so they can see how their concentration skills are improving. This can help motivate users to continue using your app and working on their concentration skills.
-
-10. Offer social accountability: Consider implementing features that allow users to hold each other accountable for their concentration goals. For example, users could set goals with their friends and check in with each other periodically to see how they're doing.
-
-11. Design a visually appealing interface: A visually appealing interface can make your app more attractive to users and encourage them to use it regularly. Consider using calming colors and clean, minimalist design to create a sense of focus and relaxation.
-
-## 5.notes on existing similar products
+## 5. 相似产品分析
 
 1. Forest: 拥有深度专注功能，界面简洁，易上手，专注时种树的构思较为巧妙，不过功能较为单一，社交属性较弱
 
@@ -84,34 +64,39 @@
 
 3. 滴答清单:功能完善，拥有日历表、收集箱等模式，不过相应的上手难度略大、略向庞大
 
-## 6.novelty of my solution and enhancements suggested 
+## 6. 新颖性与创新性
 
 1. 引入任务共享模式，让有经验的人为无从下手的新手制定计划
 2. 引入社交属性，可以为用户匹配学习规划、学习目标相近的人，使之在共同专注模式下拥有陪伴感且能相互督促
 3. 引入游戏中的任务成就模式，统计实时的碎片化奖励，且能够以此来获取成就，这种成就感、历练感将激励用户
 4. 引入极简思想，当今互联网上很多产品十分庞大且功能复杂，这样不仅让用户难以上手且会使得产品及其冗杂，缺乏产品的准确定位，如专注于信息交互的软件却要引入直播、短视频等娱乐模式，并且各色图标眼花缭乱，难以使人静下心来。故本项目致力于打造界面简洁，易于上手，单调而不失风格的自律型软件
 
-## 7.team organization and preliminary project planning
+## 7. 队伍组织与初步工作计划
 
 to be planned
 
-## 8.engineering process and methodologies
+## 8. 工作流程与方法
 
 I don't know.
 
-## 9.team collaboration platforms or systems
+## 9. 队伍合作平台
 
-Web+Android?
+使用git作为版本控制工具，github作为队伍合作平台，充分利用好分布式版本控制工具，规范提交记录。
 
-## 10.potential for further development
+## 10. 进一步发展潜力
 
-接入chatGPT帮助用户规划
+- 接入人工智能技术帮助用户规划时间
+- 提供可扩展的插件系统，以增加应用生态
 
-## 11.related technologies (platform, languages, libraries, tools, etc.)
+## 11. 相关技术
 
-？no idea
+- UML建模：使用UML知识对项目以及用户进行建模分析管理
+- 数据库系统技术：创建用户与社区数据库，提供用户与社区信息的存储和查询，以及用户各项日程规划的存储和访问
+- 移动端应用开发技术，减少开始专注所需要准备工作，方便用户随时随地规划日程以及开始专注
+- Java语言程序设计：通过Java语言程序设计来完成项目开发
+- 前后端交互：项目将前端后端分离开发，降低功能耦合性，以便于扩展开发
 
-## 12.challenges that you think you may encounter during the project’s development
+## 12. 项目挑战
 
 + 如何使用数据库存储、提供用户信息
 + UI设计的学习
