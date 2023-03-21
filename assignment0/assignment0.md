@@ -1,5 +1,7 @@
 # MindMeet
 
+<img src='https://raw.githubusercontent.com/luxingzhi27/picture/main/MindMeet.svg' style='float:left; width:300px;height:100 px'/>
+
 - 小组序号:No.15
 - 小组成员
   - 2152057 杨瑞华
