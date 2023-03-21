@@ -86,7 +86,7 @@
 
 ## 6.novelty of my solution and enhancements suggested 
 
-1. 引入任务共享模式，让有经验的人为无从下手的新手制定计划
+1. 引入任务分享模式，让有经验的人为无从下手的新手制定计划
 2. 引入社交属性，可以为用户匹配学习规划、学习目标相近的人，使之在共同专注模式下拥有陪伴感且能相互督促
 3. 引入游戏中的任务成就模式，统计实时的碎片化奖励，且能够以此来获取成就，这种成就感、历练感将激励用户
 4. 引入极简思想，当今互联网上很多产品十分庞大且功能复杂，这样不仅让用户难以上手且会使得产品及其冗杂，缺乏产品的准确定位，如专注于信息交互的软件却要引入直播、短视频等娱乐模式，并且各色图标眼花缭乱，难以使人静下心来。故本项目致力于打造界面简洁，易于上手，单调而不失风格的自律型软件
@@ -101,7 +101,7 @@ I don't know.
 
 ## 9.team collaboration platforms or systems
 
-Web+Android?
+使用Git和Github
 
 ## 10.potential for further development
 
@@ -109,7 +109,9 @@ Web+Android?
 
 ## 11.related technologies (platform, languages, libraries, tools, etc.)
 
-？no idea
+javascript
+
+csharp
 
 ## 12.challenges that you think you may encounter during the project’s development
 
