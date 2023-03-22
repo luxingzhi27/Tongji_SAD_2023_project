@@ -1,6 +1,6 @@
 # MindMeet
 
-<img src='../icon/MindMeet.svg' style='float:left; width:150px;height:100 px'/>
+<img src='https://raw.githubusercontent.com/luxingzhi27/Tongji_SAD_2023_project/main/icon/MindMeet.svg' style='float:left; width:150px;height:100 px'/>
 
 - 小组序号:No.15
 - 小组成员
