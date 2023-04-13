@@ -352,7 +352,17 @@
 
 ## 4. UI界面
 
+### 4.1 专注界面
 
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/concentration.png)
+
+### 4.2 日程界面
+
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/schedules.png)
+
+### 4.3 日程规划界面
+
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/schedule.png)
 
 
 
