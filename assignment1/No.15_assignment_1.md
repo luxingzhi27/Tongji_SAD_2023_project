@@ -347,13 +347,14 @@
 
 ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/schedule.png)
 
+### 4.4 登录与注册界面
 
+![](./../UI/Login.png)
 
+![](./../UI/SignUp.png)
 
+### 4.5 个人信息与修改
 
+![](./../UI/Profile.png)
 
-
-
-
-
-
+![](./../UI/Setting.png)
