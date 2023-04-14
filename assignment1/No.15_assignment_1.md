@@ -339,13 +339,19 @@
 
 ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/concentration.png)
 
+用户在此界面进入专注模式，点击开始按钮，即可以进入专注。
+
 ### 4.2 日程界面
 
 ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/schedules.png)
 
+用户在此界面可以选择编辑自己的日程，点击按钮后便可以进入到下图中日程编辑界面。
+
 ### 4.3 日程规划界面
 
 ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/schedule.png)
+
+用户在此界面编辑自己的特定日程，选择日程执行的日期，以及开始和结束时间，添加少量对日程的描述。
 
 ### 4.4 登录与注册界面
 
