@@ -349,12 +349,12 @@
 
 ### 4.4 登录与注册界面
 
-![](./../UI/Login.png)
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Login.png)
 
-![](./../UI/SignUp.png)
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/SignUp.png)
 
 ### 4.5 个人信息与修改
 
-![](./../UI/Profile.png)
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Profile.png)
 
-![](./../UI/Setting.png)
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Setting.png)
