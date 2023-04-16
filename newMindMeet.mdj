@@ -9576,7 +9576,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGHiNKabPvfikw="
 					},
-					"name": "Login",
+					"name": "登录流程",
 					"ownedViews": [
 						{
 							"_type": "UMLSwimlaneView",
@@ -9813,7 +9813,7 @@
 											"top": 383,
 											"width": 280.3251953125,
 											"height": 13,
-											"text": "Search username and compare password"
+											"text": "检索用户名并核对密码"
 										},
 										{
 											"_type": "LabelView",
@@ -10031,7 +10031,7 @@
 											"top": 543,
 											"width": 169.0380859375,
 											"height": 13,
-											"text": "provide basic information"
+											"text": "提供通过信息"
 										},
 										{
 											"_type": "LabelView",
@@ -10123,7 +10123,7 @@
 										"$ref": "AAAAAAGHiNKabPv906A="
 									},
 									"edgePosition": 1,
-									"text": "Valid"
+									"text": "有效"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -10230,7 +10230,7 @@
 											"top": 519,
 											"width": 122.4970703125,
 											"height": 13,
-											"text": "Give error warning"
+											"text": "给予错误提醒"
 										},
 										{
 											"_type": "LabelView",
@@ -10319,7 +10319,7 @@
 										"$ref": "AAAAAAGHiNKabPwH08I="
 									},
 									"edgePosition": 1,
-									"text": "Invalid"
+									"text": "非法"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -10539,7 +10539,7 @@
 											"top": 663,
 											"width": 199.8876953125,
 											"height": 13,
-											"text": "Use email to change possword"
+											"text": "使用绑定邮箱找回或更改密码"
 										},
 										{
 											"_type": "LabelView",
@@ -10631,7 +10631,7 @@
 										"$ref": "AAAAAAGHiNKabPwWV2A="
 									},
 									"edgePosition": 1,
-									"text": "forget password"
+									"text": "忘记密码"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -10725,7 +10725,7 @@
 										"$ref": "AAAAAAGHiNKabPwa7/k="
 									},
 									"edgePosition": 1,
-									"text": "try again"
+									"text": "再试一次"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -10832,7 +10832,7 @@
 											"top": 655,
 											"width": 116.0986328125,
 											"height": 13,
-											"text": "Successfully login"
+											"text": "成功登录"
 										},
 										{
 											"_type": "LabelView",
@@ -11150,7 +11150,7 @@
 										"$ref": "AAAAAAGHiNKabPwuk2U="
 									},
 									"edgePosition": 1,
-									"text": "Aborted login"
+									"text": "异常退出"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -12831,7 +12831,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGHiNKabPvfikw="
 					},
-					"name": "Give error warning"
+					"name": "给予错误提醒"
 				},
 				{
 					"_type": "UMLAction",
@@ -12975,7 +12975,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGHiNKabPvfikw="
 					},
-					"name": "Valid",
+					"name": "有效",
 					"source": {
 						"$ref": "AAAAAAGHiNKabvy0p+0="
 					},
@@ -13028,7 +13028,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGHiNKabPvfikw="
 					},
-					"name": "Invalid",
+					"name": "非法",
 					"source": {
 						"$ref": "AAAAAAGHiNKabvy0p+0="
 					},
@@ -13068,7 +13068,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGHiNKabPvfikw="
 					},
-					"name": "forget password",
+					"name": "忘记密码",
 					"source": {
 						"$ref": "AAAAAAGHiNKabvy2B/E="
 					},
@@ -13082,7 +13082,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGHiNKabPvfikw="
 					},
-					"name": "try again",
+					"name": "再试一次",
 					"source": {
 						"$ref": "AAAAAAGHiNKabvy2B/E="
 					},
@@ -13148,7 +13148,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGHiNKabPvfikw="
 					},
-					"name": "Aborted login",
+					"name": "异常退出",
 					"source": {
 						"$ref": "AAAAAAGHiNKabvy2B/E="
 					},
@@ -13359,7 +13359,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGHiNKabvyoX1w="
 							},
-							"name": "Successfully login"
+							"name": "成功登录"
 						},
 						{
 							"_type": "UMLActivityFinalNode",
@@ -13425,7 +13425,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGHiNKabvyyT40="
 							},
-							"name": "Search username and compare password"
+							"name": "检索用户名并核对密码"
 						},
 						{
 							"_type": "UMLMergeNode",
@@ -13441,7 +13441,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGHiNKabvyyT40="
 							},
-							"name": "provide basic information"
+							"name": "提供通过信息"
 						},
 						{
 							"_type": "UMLDecisionNode",
@@ -13457,7 +13457,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGHiNKabvyyT40="
 							},
-							"name": "Use email to change possword"
+							"name": "使用绑定邮箱找回或更改密码"
 						},
 						{
 							"_type": "UMLActivityFinalNode",
