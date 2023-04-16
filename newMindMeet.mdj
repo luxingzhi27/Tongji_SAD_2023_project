@@ -25632,17 +25632,18 @@
 									"model": {
 										"$ref": "AAAAAAGHgBfe6R/Wd24="
 									},
-									"visible": false,
 									"font": "Arial;13;0",
-									"left": 313,
+									"left": 281,
 									"top": 513,
+									"width": 65,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
 									"hostEdge": {
 										"$ref": "AAAAAAGHgBfe6R/X3PE="
 									},
-									"edgePosition": 1
+									"edgePosition": 1,
+									"text": "是否需修改"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -25697,6 +25698,7 @@
 							"lineStyle": 1,
 							"points": "299:505;300:535",
 							"showVisibility": true,
+							"showProperty": false,
 							"nameLabel": {
 								"$ref": "AAAAAAGHgBfe6R/YC3k="
 							},
@@ -25845,17 +25847,18 @@
 									"model": {
 										"$ref": "AAAAAAGHgBmA9iAqZD8="
 									},
-									"visible": false,
 									"font": "Arial;13;0",
-									"left": 351,
+									"left": 345,
 									"top": 528,
+									"width": 13,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
 									"hostEdge": {
 										"$ref": "AAAAAAGHgBmA9iArG4Y="
 									},
-									"edgePosition": 1
+									"edgePosition": 1,
+									"text": "是"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -25910,6 +25913,7 @@
 							"lineStyle": 1,
 							"points": "321:551;383:548",
 							"showVisibility": true,
+							"showProperty": false,
 							"nameLabel": {
 								"$ref": "AAAAAAGHgBmA9iAs6bM="
 							},
@@ -30721,6 +30725,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGHgBDXWR50Iog="
 					},
+					"name": "是否需修改",
 					"source": {
 						"$ref": "AAAAAAGHgBa9lR9078c="
 					},
@@ -30734,6 +30739,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGHgBDXWR50Iog="
 					},
+					"name": "是",
 					"source": {
 						"$ref": "AAAAAAGHgBHhlh8/1k8="
 					},
