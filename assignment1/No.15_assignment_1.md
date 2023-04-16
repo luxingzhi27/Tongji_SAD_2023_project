@@ -396,15 +396,23 @@
 
 ### 4.4 登录与注册界面
 
+用户在初始界面进行注册或者登录，使用邮箱注册
+
 ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Login.png)
 
-![](https://raw.githubusercontent.com/luxingzhi27/picture/main/SignUp.png)
+![](./assets/SignUp.png)
 
 ### 4.5 个人信息与修改
 
-![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Profile.png)
+用户在个人主页观看个人成就与先前完成的状态
+
+![](./assets/Profile.png)
+
+用户在设置界面可以修改先前的信息
 
 ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Setting.png)
+
+
 
 ## 5.补充性内容
 
