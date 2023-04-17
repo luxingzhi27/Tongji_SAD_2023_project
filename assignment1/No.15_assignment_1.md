@@ -390,13 +390,13 @@
 
 ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Login.png)
 
-![](./assets/SignUp.png)
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/signup.png)
 
 ### 4.5 个人信息与修改
 
 用户在个人主页观看个人成就与先前完成的状态
 
-![](./assets/Profile.png)
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/profile.png)
 
 用户在设置界面可以修改先前的信息
 
