@@ -87,7 +87,7 @@
 
 ### 3.2 用户认证
 
-![](./assets/用户认证.svg)
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E7%94%A8%E6%88%B7%E8%AE%A4%E8%AF%81.svg)
 
 #### 3.2.1 注册
 
@@ -133,7 +133,7 @@
 
 ### 3.3 时间管理
 
-![](./assets/时间管理.svg)
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.svg)
 
 #### 3.3.1 创建日程
 
@@ -141,7 +141,7 @@
 
 ##### 活动图
 
-![](./assets/创建日程.svg)
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E5%88%9B%E5%BB%BA%E6%97%A5%E7%A8%8B.svg)
 
 | 用例编号 | UC003                                                        |
 | -------- | ------------------------------------------------------------ |
@@ -159,10 +159,6 @@
 #### 3.3.2 规划日程
 
 用户可以调整、重新设置自己的日程时间安排、日程优先级等信息，来适应新的实际情况。
-
-##### 活动图
-
-![](./assets/进程跟踪.svg)
 
 #### 3.3.3 专注模式
 
@@ -187,7 +183,11 @@
 
 #### 3.3.4 进程跟踪
 
-用户可以在**MindMeet**中查看自己的工作/学习进程
+用户可以在**MindMeet**中查看自己的工作/学习进程。
+
+##### 活动图
+
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E8%BF%9B%E7%A8%8B%E8%B7%9F%E8%B8%AA.svg)
 
 ##### 功能描述
 
@@ -224,13 +224,13 @@
 
 ### 3.4 社交分享
 
-![](./assets/社交分享.svg)
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E7%A4%BE%E4%BA%A4%E5%88%86%E4%BA%AB.svg)
 
 #### 3.4.1 添加好友
 
 用户可以在**MindMeet**中添加其他用户为好友，以便进行私聊和分享学习经验。
 
-![](No.15_assignment_1.assets/添加好友.svg)
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E6%B7%BB%E5%8A%A0%E5%A5%BD%E5%8F%8B.svg)
 
 ##### 功能描述
 
@@ -250,7 +250,7 @@
 
 用户可以与自己的好友进行私聊，以便进行学习和工作交流。
 
-![](No.15_assignment_1.assets/好友私聊.svg)
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E5%A5%BD%E5%8F%8B%E7%A7%81%E8%81%8A.svg)
 
 ##### 功能描述
 
@@ -402,8 +402,6 @@
 
 ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Setting.png)
 
-
-
 ## 5.补充性内容
 
 1. 用户只能通过创建房间来进行“共同专注”，且房间内人数存在上限。专注结束后房间消失，若要进行下一次“共同专注”，仍需再创建房间。
@@ -416,7 +414,7 @@
 
 **相关书籍:**
 
-<img src="No.15_assignment_1.assets/1679.516.big_.jpg" alt="img" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/luxingzhi27/picture/main/1679.516.big_.jpg" alt="img" style="zoom:50%;" />
 
 《Android基础教程》（第四版）作者： 余平、张建华  ISBN：9787517009757
 
