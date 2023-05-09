@@ -1,7 +1,7 @@
 {
 	"_type": "Project",
 	"_id": "AAAAAAFF+h6SjaM2Hec=",
-	"name": "Untitled",
+	"name": "system-architure",
 	"ownedElements": [
 		{
 			"_type": "UMLModel",
@@ -1790,7 +1790,7 @@
 											"font": "Arial;13;0",
 											"left": -80,
 											"top": -112,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -1970,7 +1970,7 @@
 											"font": "Arial;13;0",
 											"left": -224,
 											"top": -96,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -2150,7 +2150,7 @@
 											"font": "Arial;13;0",
 											"left": -224,
 											"top": -96,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -2330,7 +2330,7 @@
 											"font": "Arial;13;0",
 											"left": -48,
 											"top": -32,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -2510,7 +2510,7 @@
 											"font": "Arial;13;0",
 											"left": -80,
 											"top": -80,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -2690,7 +2690,7 @@
 											"font": "Arial;13;0",
 											"left": -64,
 											"top": -32,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -2870,7 +2870,7 @@
 											"font": "Arial;13;0",
 											"left": -96,
 											"top": -96,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -3050,7 +3050,7 @@
 											"font": "Arial;13;0",
 											"left": -112,
 											"top": -64,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -3230,7 +3230,7 @@
 											"font": "Arial;13;0",
 											"left": -144,
 											"top": -64,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -3410,7 +3410,7 @@
 											"font": "Arial;13;0",
 											"left": -128,
 											"top": -80,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -3590,7 +3590,7 @@
 											"font": "Arial;13;0",
 											"left": 784,
 											"top": -128,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -3770,7 +3770,7 @@
 											"font": "Arial;13;0",
 											"left": -336,
 											"top": -32,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -3950,7 +3950,7 @@
 											"font": "Arial;13;0",
 											"left": -352,
 											"top": -32,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -4116,7 +4116,7 @@
 											"font": "Arial;13;1",
 											"left": 369,
 											"top": 391,
-											"width": 104,
+											"width": 105.45361328125,
 											"height": 13,
 											"text": "主题风格UI子系统"
 										},
@@ -4130,7 +4130,7 @@
 											"font": "Arial;13;0",
 											"left": -336,
 											"top": -16,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -4151,7 +4151,7 @@
 									"font": "Arial;13;0",
 									"left": 364,
 									"top": 384,
-									"width": 114,
+									"width": 115.45361328125,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGIACSzwfohz3k="
@@ -4235,7 +4235,7 @@
 							"containerChangeable": true,
 							"left": 344,
 							"top": 384,
-							"width": 134,
+							"width": 135.45361328125,
 							"height": 45,
 							"nameCompartment": {
 								"$ref": "AAAAAAGIACSzwfogJjU="
@@ -4310,7 +4310,7 @@
 											"font": "Arial;13;0",
 											"left": -96,
 											"top": -16,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -4490,7 +4490,7 @@
 											"font": "Arial;13;0",
 											"left": -48,
 											"top": -16,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -4670,7 +4670,7 @@
 											"font": "Arial;13;0",
 											"left": -80,
 											"top": -48,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -4850,7 +4850,7 @@
 											"font": "Arial;13;0",
 											"left": -80,
 											"top": -48,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -5030,7 +5030,7 @@
 											"font": "Arial;13;0",
 											"left": -112,
 											"top": -48,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -5210,7 +5210,7 @@
 											"font": "Arial;13;0",
 											"left": -80,
 											"top": -32,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -5390,7 +5390,7 @@
 											"font": "Arial;13;0",
 											"left": -64,
 											"top": -16,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -5570,7 +5570,7 @@
 											"font": "Arial;13;0",
 											"left": -96,
 											"top": -32,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -5736,7 +5736,7 @@
 											"font": "Arial;13;1",
 											"left": 369,
 											"top": 527,
-											"width": 104,
+											"width": 105.45361328125,
 											"height": 13,
 											"text": "主题风格UI子系统"
 										},
@@ -5750,7 +5750,7 @@
 											"font": "Arial;13;0",
 											"left": -64,
 											"top": -32,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -5771,7 +5771,7 @@
 									"font": "Arial;13;0",
 									"left": 364,
 									"top": 520,
-									"width": 114,
+									"width": 115.45361328125,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGIACnXo/xKk2s="
@@ -5855,7 +5855,7 @@
 							"containerChangeable": true,
 							"left": 344,
 							"top": 520,
-							"width": 134,
+							"width": 135.45361328125,
 							"height": 45,
 							"nameCompartment": {
 								"$ref": "AAAAAAGIACnXo/xJEa8="
@@ -5930,7 +5930,7 @@
 											"font": "Arial;13;0",
 											"left": -112,
 											"top": -48,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -6110,7 +6110,7 @@
 											"font": "Arial;13;0",
 											"left": 256,
 											"top": -32,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -6303,7 +6303,7 @@
 											"font": "Arial;13;0",
 											"left": 80,
 											"top": -32,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -6483,7 +6483,7 @@
 											"font": "Arial;13;0",
 											"left": -752,
 											"top": -32,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -6663,7 +6663,7 @@
 											"font": "Arial;13;0",
 											"left": -16,
 											"top": -48,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
@@ -6856,7 +6856,7 @@
 											"font": "Arial;13;0",
 											"left": -64,
 											"top": -32,
-											"width": 106.89453125,
+											"width": 114.3720703125,
 											"height": 13,
 											"text": "(from sysDiagram)"
 										},
