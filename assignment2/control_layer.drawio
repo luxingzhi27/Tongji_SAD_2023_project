@@ -1,0 +1,47 @@
+<mxfile host="Electron" modified="2023-05-13T07:00:39.205Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="ozCyQ3h6hHRAmqw1YBqg" version="21.2.8" type="device">
+  <diagram name="第 1 页" id="ibN58S21m_t_Lkc9La1D">
+    <mxGraphModel dx="1036" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Y5HGv0INhDwn4c05-D9S-10" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="Y5HGv0INhDwn4c05-D9S-1" target="Y5HGv0INhDwn4c05-D9S-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y5HGv0INhDwn4c05-D9S-11" value="更新界面状态" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Y5HGv0INhDwn4c05-D9S-10">
+          <mxGeometry x="-0.0578" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y5HGv0INhDwn4c05-D9S-1" value="界面状态控制" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillStyle=hatch;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="230" y="150" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y5HGv0INhDwn4c05-D9S-2" value="界面状态" style="rounded=1;whiteSpace=wrap;html=1;fillStyle=hatch;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="70" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Y5HGv0INhDwn4c05-D9S-8" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="Y5HGv0INhDwn4c05-D9S-3" target="Y5HGv0INhDwn4c05-D9S-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y5HGv0INhDwn4c05-D9S-9" value="传递界面状态" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Y5HGv0INhDwn4c05-D9S-8">
+          <mxGeometry x="-0.1404" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y5HGv0INhDwn4c05-D9S-3" value="业务接口" style="rounded=1;whiteSpace=wrap;html=1;fillStyle=hatch;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="260" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Y5HGv0INhDwn4c05-D9S-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Y5HGv0INhDwn4c05-D9S-4" target="Y5HGv0INhDwn4c05-D9S-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y5HGv0INhDwn4c05-D9S-4" value="调用接口" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillStyle=hatch;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="390" y="150" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y5HGv0INhDwn4c05-D9S-6" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="Y5HGv0INhDwn4c05-D9S-5" target="Y5HGv0INhDwn4c05-D9S-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y5HGv0INhDwn4c05-D9S-5" value="传入数据" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;fillStyle=hatch;" vertex="1" parent="1">
+          <mxGeometry x="540" y="110" width="55" height="55" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
