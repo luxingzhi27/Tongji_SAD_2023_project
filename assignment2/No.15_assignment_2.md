@@ -108,11 +108,39 @@
 
 ## 3. 分析模型
 
-### 3.1 登录注册
+### 3.1 用户认证
 
-### 3.2 开始专注
+- 类图
 
-### 3.3 线上自习室
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Model1!auth-subsystem_0.png)
+
+- 序列图
+
+  1. 注册
+
+     ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Collaboration2!Interaction1!Register_2.png)
+
+  2. 登录
+
+     ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Collaboration1!Interaction1!Login_1.png)
+
+  
+
+### 3.2 专注模式
+
+- 类图
+
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Model!%E4%B8%93%E6%B3%A8%E6%A8%A1%E5%BC%8F_0.png)
+
+- 序列图
+
+  1. 开始专注
+
+     ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Collaboration1!Interaction1!%E5%BC%80%E5%A7%8B%E4%B8%93%E6%B3%A8_1.png)
+
+  2. 线上自习室
+
+     ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Collaboration2!Interaction1!%E7%BA%BF%E4%B8%8A%E8%87%AA%E4%B9%A0%E5%AE%A4_2.png)
 
 ### 3.4 悄悄话
 
