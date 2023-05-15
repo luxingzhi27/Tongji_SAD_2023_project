@@ -152,11 +152,33 @@
 
 ### 3.4 悄悄话
 
++ 类图
+
+​			好友模块一共包含两个界面，一个是好友列表界面，另一个则是好友私聊(OnChat)界面。在进入私聊界面后，可以进行简单的信息交互，发送图片、表情、文本消息。一条消息除了本身信息外，还需要包含双方信息、发送时间等故在此封装为一个单独的类。悄悄话界面也是使用的MVP架构，其中由OnChatModel来存储交流信息。界面元素由三层构成，上层显示好友基本状态，中层为交流信息的chatFlowFrame，底部为输入框。
+
+![悄悄话类图](./assets/悄悄话类图.png)
+
+
+
++ 序列图
+
+​		当进入好友界面首先会获取数据库中自己的好友信息，以渲染ChatView(好友列表视图)，如若选中好友进行聊天，此时会获取本地缓存的交流信息以初始化OnChatView(聊天界面)。在此模式下，共有两个主要事件，发送消息和接受消息。在此采用多线程模式，使得发送和接受消息能同时运行。当编辑完消息并发送后，数据会存储在数据库中，本地会构造一个ChatInfor类存储在OnChatModel中，并告知OnChatPrensenter去更新OnChatView。
+
+![悄悄话Sequence](./assets/悄悄话Sequence.png)
+
 ### 3.5 日程规划
 
++ 类图
 
+​		MindMeet提供简单的日程规划模式，在日程规划模式下用户能够预览、新建、修改、删除日程。该模式也采用MVP架构，同时采用双层View(ScheduleView、SetScheduleView)以满足新建日程和预览所有日程的需求。而ScheduleInfor包含日程信息该类存储于ScheduleModel中。
 
+![日程表类图](./assets/日程表类图.png)
 
++ 序列图
+
+​		日程表模式下的事件交互较为简单。当用户选中添加日程按钮或者某日程后，会新建一个SetScheduleView，在该界面下用户进行日程的信息的相关设置，设置的信息存储在ScheduleInfor这个类中，当确认创建后，SchedulePresenter则会控制ScheduleModel进行信息存储并更新SheduleView。当用户长按日程模块时会进入到设置模式，设置模式下用户可以删除已完成的任务，同时SchedulePresenter会控制ScheduleModel和SheduleView的修改。
+
+![日程表sequence](./assets/日程表sequence.png)
 
 
 
