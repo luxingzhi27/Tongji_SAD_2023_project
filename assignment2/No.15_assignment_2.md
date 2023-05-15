@@ -46,7 +46,12 @@
         - 共同专注->线上自习室
         - 查看专注时间->查看专注记录
         - 进度跟踪->记录跟踪
+     
+        更改后的用例名更加符合事实情况，且更加生动
+     
      2. 将进度跟踪移到个人主页板块
+     
+        进度跟踪在个人主页板块展示，故将其移动到个人主页板块
 
 3. 对专业术语的相关更新，以下是更新后的专业术语表：
 
@@ -171,65 +176,86 @@
 
 ### 3.4 悄悄话
 
-<<<<<<< HEAD
-+ 类图
-
-​			好友模块一共包含两个界面，一个是好友列表界面，另一个则是好友私聊(OnChat)界面。在进入私聊界面后，可以进行简单的信息交互，发送图片、表情、文本消息。一条消息除了本身信息外，还需要包含双方信息、发送时间等故在此封装为一个单独的类。悄悄话界面也是使用的MVP架构，其中由OnChatModel来存储交流信息。界面元素由三层构成，上层显示好友基本状态，中层为交流信息的chatFlowFrame，底部为输入框。
-
-![悄悄话类图](./assets/悄悄话类图.png)
-
-
-
-+ 序列图
-
-​		当进入好友界面首先会获取数据库中自己的好友信息，以渲染ChatView(好友列表视图)，如若选中好友进行聊天，此时会获取本地缓存的交流信息以初始化OnChatView(聊天界面)。在此模式下，共有两个主要事件，发送消息和接受消息。在此采用多线程模式，使得发送和接受消息能同时运行。当编辑完消息并发送后，数据会存储在数据库中，本地会构造一个ChatInfor类存储在OnChatModel中，并告知OnChatPrensenter去更新OnChatView。
-
-![悄悄话Sequence](./assets/悄悄话Sequence.png)
-
-### 3.5 日程规划
-
-+ 类图
-
-​		MindMeet提供简单的日程规划模式，在日程规划模式下用户能够预览、新建、修改、删除日程。该模式也采用MVP架构，同时采用双层View(ScheduleView、SetScheduleView)以满足新建日程和预览所有日程的需求。而ScheduleInfor包含日程信息该类存储于ScheduleModel中。
-
-![日程表类图](./assets/日程表类图.png)
-
-+ 序列图
-
-​		日程表模式下的事件交互较为简单。当用户选中添加日程按钮或者某日程后，会新建一个SetScheduleView，在该界面下用户进行日程的信息的相关设置，设置的信息存储在ScheduleInfor这个类中，当确认创建后，SchedulePresenter则会控制ScheduleModel进行信息存储并更新SheduleView。当用户长按日程模块时会进入到设置模式，设置模式下用户可以删除已完成的任务，同时SchedulePresenter会控制ScheduleModel和SheduleView的修改。
-
-![日程表sequence](./assets/日程表sequence.png)
-=======
 - 类图
 
-  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Model!Main_0.png)
+  好友模块一共包含两个界面，一个是好友列表界面，另一个则是好友私聊(OnChat)界面。在进入私聊界面后，可以进行简单的信息交互，发送图片、表情、文本消息。一条消息除了本身信息外，还需要包含双方信息、发送时间等故在此封装为一个单独的类。悄悄话界面也是使用的MVP架构，其中由OnChatModel来存储交流信息。界面元素由三层构成，上层显示好友基本状态，中层为交流信息的chatFlowFrame，底部为输入框。
+
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E6%82%84%E6%82%84%E8%AF%9D%E7%B1%BB%E5%9B%BE.png)
 
 - 序列图
 
-  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Collaboration1!Interaction1!%E6%82%84%E6%82%84%E8%AF%9D%E6%A8%A1%E5%BC%8F_1.png)
+  当进入好友界面首先会获取数据库中自己的好友信息，以渲染ChatView(好友列表视图)，如若选中好友进行聊天，此时会获取本地缓存的交流信息以初始化OnChatView(聊天界面)。在此模式下，共有两个主要事件，发送消息和接受消息。在此采用多线程模式，使得发送和接受消息能同时运行。当编辑完消息并发送后，数据会存储在数据库中，本地会构造一个ChatInfor类存储在OnChatModel中，并告知OnChatPrensenter去更新OnChatView。
+
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E6%82%84%E6%82%84%E8%AF%9DSequence.png)
 
 ### 3.5 日程规划
 
 - 类图
 
-  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Model!%E6%97%A5%E7%A8%8B%E8%A1%A8_0.png)
+  MindMeet提供简单的日程规划模式，在日程规划模式下用户能够预览、新建、修改、删除日程。该模式也采用MVP架构，同时采用双层View(ScheduleView、SetScheduleView)以满足新建日程和预览所有日程的需求。而ScheduleInfor包含日程信息该类存储于ScheduleModel中。
+  
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E6%97%A5%E7%A8%8B%E8%A1%A8%E7%B1%BB%E5%9B%BE.png)
 
 - 序列图
 
-  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Collaboration1!Interaction1!%E6%97%A5%E7%A8%8B%E8%A1%A8_1.png)
+  日程表模式下的事件交互较为简单。当用户选中添加日程按钮或者某日程后，会新建一个SetScheduleView，在该界面下用户进行日程的信息的相关设置，设置的信息存储在ScheduleInfor这个类中，当确认创建后，SchedulePresenter则会控制ScheduleModel进行信息存储并更新SheduleView。当用户长按日程模块时会进入到设置模式，设置模式下用户可以删除已完成的任务，同时SchedulePresenter会控制ScheduleModel和SheduleView的修改。
+  
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E6%97%A5%E7%A8%8B%E8%A1%A8sequence.png)
 
 ## 4. 更新UI
 
+### 4.1 专注视图
 
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/FocusView.png)
 
+与上次作业相比，该板块UI添加了正计时和倒计时模式的选择。用户在此界面选择正计时或倒计时专注。
 
+### 4.2 设置专注时间
 
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/SetFocusView.png)
 
+新增设置专注时间界面，用户可在此界面设置专注时间。
 
+### 4.3 专注进行
 
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/OnFocusView.png)
 
+新增专注进行的UI界面，图示正计时模式，可以按下停止按钮停止专注。
 
->>>>>>> 988f76a2e97a197bd4cb25a5ba0ad0dcf1abf48e
+### 4.4 日程界面
+
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/ScheduleView.png)
+
+添加了新建日程的按钮区域，用户可点击“+”号添加日程。
+
+### 4.5 设置日程
+
+![](https://raw.githubusercontent.com/luxingzhi27/picture/main/SetSchedule.png)
+
+新增新建日程界面，用户在此界面新建日程。
+
+## 5. 参考引用
+
+1. [应用架构指南 | Android 开发者 | Android Developers (google.cn)](https://developer.android.google.cn/jetpack/guide?hl=zh-cn)
+
+   此网页介绍了Android应用开发常见的应用架构，向开发者介绍一系列常见的架构原则、推荐的应用架构、常见的最佳做法以及一些真实的应用实例。本项目所采用分层架构以及界面展示部分均参考此设计准则设计。
+
+2. [大象：ThinkinginUML_百度百科 (baidu.com)](https://baike.baidu.com/item/大象：ThinkinginUML/15196257)
+
+   《大象：ThinkinginUML》是2009年中国水利水电出版社出版的图书，以UML为载体，将面向对象的分析设计思想巧妙地融入建模过程中，通过贯穿全书的实例将软件系统开发过程中方方面面的知识有机地结合在一起，用生动的语言和精彩的事例将复杂枯燥的软件过程讲解得津津有味。本项目参考该书设计了此次的类图以及序列图
+
+## 6. 分工
+
+- 2152057 杨瑞华
+  - 文档编写
+  - 系统架构设计及绘图
+- 2152831 陈峥海
+  - 文档编写
+  - 类图，序列图设计
+- 2153691 邓岳衡
+  - 文档编写
+  - 类图，序列图设计
+  - UI更新
 
 
 
