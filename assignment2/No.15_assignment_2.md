@@ -27,7 +27,26 @@
 
 2. 对总体用例图的细节更新
 
-   …
+   - 原用例图
+
+     ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/ALL!MindMeet_0.svg)
+
+   - 现在用例图
+
+     ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/MindMeet.png)
+
+   - 更改
+
+     1. 用例改名：
+        - 专注模式->开始专注
+        - 获得奖励->积分奖励
+        - 奖励设置和更新->积分商店更新
+        - 社交->交流圈
+        - 好友私聊->悄悄话
+        - 共同专注->线上自习室
+        - 查看专注时间->查看专注记录
+        - 进度跟踪->记录跟踪
+     2. 将进度跟踪移到个人主页板块
 
 3. 对专业术语的相关更新，以下是更新后的专业术语表：
 
@@ -52,7 +71,7 @@
 
 5. 主要功能的类设计，与交流图设计
 
-6. …
+6. 更新了部分ui，将在最后一部分展示
 
 ## 2. 架构分析
 
@@ -152,7 +171,31 @@
 
 ### 3.4 悄悄话
 
+- 类图
+
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Model!Main_0.png)
+
+- 序列图
+
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Collaboration1!Interaction1!%E6%82%84%E6%82%84%E8%AF%9D%E6%A8%A1%E5%BC%8F_1.png)
+
 ### 3.5 日程规划
+
+- 类图
+
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Model!%E6%97%A5%E7%A8%8B%E8%A1%A8_0.png)
+
+- 序列图
+
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Collaboration1!Interaction1!%E6%97%A5%E7%A8%8B%E8%A1%A8_1.png)
+
+## 4. 更新UI
+
+
+
+
+
+
 
 
 
