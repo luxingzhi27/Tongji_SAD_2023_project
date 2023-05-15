@@ -27,7 +27,26 @@
 
 2. 对总体用例图的细节更新
 
-   …
+   - 原用例图
+
+     ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/ALL!MindMeet_0.svg)
+
+   - 现在用例图
+
+     ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/MindMeet.png)
+
+   - 更改
+
+     1. 用例改名：
+        - 专注模式->开始专注
+        - 获得奖励->积分奖励
+        - 奖励设置和更新->积分商店更新
+        - 社交->交流圈
+        - 好友私聊->悄悄话
+        - 共同专注->线上自习室
+        - 查看专注时间->查看专注记录
+        - 进度跟踪->记录跟踪
+     2. 将进度跟踪移到个人主页板块
 
 3. 对专业术语的相关更新，以下是更新后的专业术语表：
 
@@ -52,7 +71,7 @@
 
 5. 主要功能的类设计，与交流图设计
 
-6. …
+6. 更新了部分ui，将在最后一部分展示
 
 ## 2. 架构分析
 
@@ -152,6 +171,7 @@
 
 ### 3.4 悄悄话
 
+<<<<<<< HEAD
 + 类图
 
 ​			好友模块一共包含两个界面，一个是好友列表界面，另一个则是好友私聊(OnChat)界面。在进入私聊界面后，可以进行简单的信息交互，发送图片、表情、文本消息。一条消息除了本身信息外，还需要包含双方信息、发送时间等故在此封装为一个单独的类。悄悄话界面也是使用的MVP架构，其中由OnChatModel来存储交流信息。界面元素由三层构成，上层显示好友基本状态，中层为交流信息的chatFlowFrame，底部为输入框。
@@ -179,6 +199,37 @@
 ​		日程表模式下的事件交互较为简单。当用户选中添加日程按钮或者某日程后，会新建一个SetScheduleView，在该界面下用户进行日程的信息的相关设置，设置的信息存储在ScheduleInfor这个类中，当确认创建后，SchedulePresenter则会控制ScheduleModel进行信息存储并更新SheduleView。当用户长按日程模块时会进入到设置模式，设置模式下用户可以删除已完成的任务，同时SchedulePresenter会控制ScheduleModel和SheduleView的修改。
 
 ![日程表sequence](./assets/日程表sequence.png)
+=======
+- 类图
+
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Model!Main_0.png)
+
+- 序列图
+
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Collaboration1!Interaction1!%E6%82%84%E6%82%84%E8%AF%9D%E6%A8%A1%E5%BC%8F_1.png)
+
+### 3.5 日程规划
+
+- 类图
+
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Model!%E6%97%A5%E7%A8%8B%E8%A1%A8_0.png)
+
+- 序列图
+
+  ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Collaboration1!Interaction1!%E6%97%A5%E7%A8%8B%E8%A1%A8_1.png)
+
+## 4. 更新UI
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 988f76a2e97a197bd4cb25a5ba0ad0dcf1abf48e
 
 
 

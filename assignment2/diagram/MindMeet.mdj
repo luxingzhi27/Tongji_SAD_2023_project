@@ -3605,7 +3605,7 @@
 											"top": 1027.5,
 											"width": 64,
 											"height": 13,
-											"text": "专注统计"
+											"text": "记录跟踪"
 										},
 										{
 											"_type": "LabelView",
@@ -8139,7 +8139,7 @@
 											"font": "Arial;13;0",
 											"left": -64,
 											"top": -32,
-											"width": 61.40087890625,
+											"width": 64.75244140625,
 											"height": 13,
 											"text": "(from ALL)"
 										},
@@ -9074,7 +9074,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGHemcHyP8oEs8="
 					},
-					"name": "专注统计"
+					"name": "记录跟踪"
 				},
 				{
 					"_type": "UMLUseCase",
