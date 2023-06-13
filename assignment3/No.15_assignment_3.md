@@ -393,7 +393,7 @@
 
 ## 3. 设计机制
 
-![chat](./diagram/design-mechanism/chat.png)
+![chat](https://raw.githubusercontent.com/luxingzhi27/picture/main/chat.png)
 
 ### 3.1. 数据持久机制
 
@@ -522,13 +522,17 @@ WebSocket的流程简单来说就是建立连接、进行双向通信、保持�
 
 ## 4. 用例实现
 
-![日程管理.drawio](No.15_assignment_3.assets/日程管理.drawio-1686669026967.png)
+### 4.1. 日程规划
 
-![日程管理序列图.drawio](No.15_assignment_3.assets/日程管理序列图.drawio.png)
+![日程管理.drawio](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86.drawio.png)
 
-![专注模式.drawio](No.15_assignment_3.assets/专注模式.drawio.png)
+![日程管理序列图.drawio](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86%E5%BA%8F%E5%88%97%E5%9B%BE.drawio.png)
 
-![个人&线上专注序列图.drawio](No.15_assignment_3.assets/个人&线上专注序列图.drawio-1686669014418.png)
+### 4.2. 专注模式
+
+![专注模式.drawio](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E4%B8%93%E6%B3%A8%E6%A8%A1%E5%BC%8F.drawio.png)
+
+![个人&线上专注序列图.drawio](https://raw.githubusercontent.com/luxingzhi27/picture/main/%E4%B8%AA%E4%BA%BA%26%E7%BA%BF%E4%B8%8A%E4%B8%93%E6%B3%A8%E5%BA%8F%E5%88%97%E5%9B%BE.drawio.png)
 
 ## 5. 架构风格与关键决定
 
