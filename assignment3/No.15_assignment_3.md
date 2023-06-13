@@ -84,22 +84,23 @@
 | :---: | :----------------------------: | :--------------------------------------------------: |
 |  018  |    POST api/schedule/create    |  该接口接受用户的一次上传日程记录，返回是否上传成功  |
 |  019  | GET api/schedule/?sheduleID=id |        该接口接受日程ID，返回该日程的详细信息        |
-|  020  |      DELETE api/schedule       | 该接口接受日程ID，删除该日程的详细信息，返回是否成功 |
+|  020  |   DELETE api/schedule/delete   | 该接口接受日程ID，删除该日程的详细信息，返回是否成功 |
 |  021  |  GET api/schedule/?userID=id   |       该接口接受用户id,返回用户所有日程的日程        |
+|  022  |    PUT api/schedule/modify     |  该接口接受用户的一次修改日程记录，返回是否修改成功  |
 
 **交流圈子系统**
 
 | 编号  |            Rest Api            |                       接口描述                       |
 | :---: | :----------------------------: | :--------------------------------------------------: |
-|  022  |  POST api/circle/show/create   |      该接口接受用户的一次分享，返回分享是否成功      |
-|  023  | GET api/circle/show/?showID=id |          该接口分享id，返回该分享的详细信息          |
-|  024  |     DELETE api/circle/show     | 该接口接受分享id，删除该分享的详细信息，返回是否成功 |
-|  025  | POST api/circle/comment/create |      该接口接受用户的一次评论，返回评论是否成功      |
-|  026  | GET api/circle/comment/?showID |          该接口分享id，返回该分享的评论信息          |
-|  027  |   DELETE api/circle/comment    |      该接口接受评论id，删除该评论，返回是否成功      |
-|  028  |  POST api/circle/like/create   |      该接口接受用户的一次点赞，返回点赞是否成功      |
-|  029  | GET api/circle/like/?showID=id |        该接口接受分享id，返回该分享的点赞信息        |
-|  030  |     DELETE api/circle/like     |      该接口接受点赞id，删除该点赞，返回是否成功      |
+|  023  |  POST api/circle/show/create   |      该接口接受用户的一次分享，返回分享是否成功      |
+|  024  | GET api/circle/show/?showID=id |          该接口分享id，返回该分享的详细信息          |
+|  025  |     DELETE api/circle/show     | 该接口接受分享id，删除该分享的详细信息，返回是否成功 |
+|  026  | POST api/circle/comment/create |      该接口接受用户的一次评论，返回评论是否成功      |
+|  027  | GET api/circle/comment/?showID |          该接口分享id，返回该分享的评论信息          |
+|  028  |   DELETE api/circle/comment    |      该接口接受评论id，删除该评论，返回是否成功      |
+|  029  |  POST api/circle/like/create   |      该接口接受用户的一次点赞，返回点赞是否成功      |
+|  030  | GET api/circle/like/?showID=id |        该接口接受分享id，返回该分享的点赞信息        |
+|  031  |     DELETE api/circle/like     |      该接口接受点赞id，删除该点赞，返回是否成功      |
 
 ### 2.3. 接口规范
 
@@ -248,7 +249,147 @@
 
 日程管理子系统一共提供以下接口：
 
+| 编号         | 001                                                  |
+| :----------- | :--------------------------------------------------- |
+| REST API     | POST api/schedule/create                             |
+| Interface    | ScheduleUtil.createSchedule(schedule: Schedule):bool |
+| Arguement    | schedule: Schedule                                   |
+| Return Value | bool                                                 |
+| Introduction | 此接口使用户创建日程，返回创建结果                   |
 
+| 编号         | 002                                                                          |
+| :----------- | :--------------------------------------------------------------------------- |
+| REST API     | PUT api/schedule/modify                                                      |
+| Interface    | ScheduleUtil.modifySchedule(oldScheduleID: String,newSchedule:Schedule):bool |
+| Arguement    | oldScheduleID: String,newSchedule:Schedule                                   |
+| Return       | bool                                                                         |
+| Introduction | 此接口使用户修改日程，返回修改结果                                           |
+
+| 编号         | 003                                                  |
+| :----------- | :--------------------------------------------------- |
+| REST API     | DELETE api/schedule/delete                           |
+| Interface    | ScheduleUtil.deleteSchedule(scheduleID: String):bool |
+| Arguement    | scheduleID: String                                   |
+| Return       | bool                                                 |
+| Introduction | 此接口使用户删除日程，返回删除结果                   |
+
+| 编号         | 004                                               |
+| :----------- | :------------------------------------------------ |
+| REST API     | GET api/schedule/?scheduleID=id                   |
+| Interface    | ScheduleUtil.getSchedule(scheduleID: String):bool |
+| Arguement    | scheduleID: String                                |
+| Return       | bool                                              |
+| Introduction | 此接口通过scheduleID查询用户日程的详细信息        |
+
+
+| 编号         | 005                                                         |
+| :----------- | :---------------------------------------------------------- |
+| REST API     | GET api/schedule/?userID=id                                 |
+| Interface    | ScheduleUtil.getScheduleList(userID: String):List<Schedule> |
+| Arguement    | userID: String                                              |
+| Return Value | List<Schedule>                                              |
+| Introduction | 此接口通过userID查询用户日程列表                            |
+
+| 编号         | 006                                                                                                 |
+| :----------- | :-------------------------------------------------------------------------------------------------- |
+| Interface    | ScheduleUtil.getScheduleListByTime(userID: String,startTime: String,endTime: String):List<Schedule> |
+| Arguement    | userID: String,startTime: String,endTime: String                                                    |
+| Return Value | List<Schedule>                                                                                      |
+| Introduction | 此接口通过userID和时间段查询用户日程列表                                                            |
+
+| 编号         | 007                                                                                    |
+| :----------- | :------------------------------------------------------------------------------------- |
+| Interface    | ScheduleUtil.getScheduleListByType(userID: String,scheduleType: String):List<Schedule> |
+| Arguement    | userID: String,scheduleType: String                                                    |
+| Return Value | List<Schedule>                                                                         |
+| Introduction | 此接口通过userID和日程类型查询用户日程列表                                             |
+
+| 编号         | 008                                                                                        |
+| :----------- | :----------------------------------------------------------------------------------------- |
+| Interface    | ScheduleUtil.getScheduleListByStatus(userID: String,scheduleStatus: String):List<Schedule> |
+| Arguement    | userID: String,scheduleStatus: String                                                      |
+| Return Value | List<Schedule>                                                                             |
+| Introduction | 此接口通过userID和日程状态查询用户日程列表                                                 |
+
+**添加日程操作流程**
+
+1. 通过前端界面获取到用户输入的日程信息
+2. 构造Schedule对象
+3. 调用`ScheduleUtil.createSchedule(schedule: Schedule):bool`接口
+4. 得到调用结果，返回给前端
+
+- 传递json格式示例：
+   ```json
+   {
+      "code": 200,
+      "msg": "success"
+   }
+   ```
+
+**修改日程操作流程**
+
+1. 通过前端界面获取到用户输入的修改后日程信息和要修改的日程ID
+2. 构造Schedule对象
+3. 调用`ScheduleUtil.modifySchedule(oldScheduleID: String,newSchedule:Schedule):bool`接口
+4. 得到调用结果，返回给前端
+
+- 传递json格式示例：
+   ```json
+   {
+      "code": 200,
+      "msg": "success"
+   }
+   ```
+
+**删除日程操作流程**
+
+1. 通过前端界面获取到要删除的日程ID
+2. 调用`ScheduleUtil.deleteSchedule(scheduleID: String):bool`接口
+3. 得到调用结果，返回给前端
+
+- 传递json格式示例：
+   ```json
+   {
+      "code": 200,
+      "msg": "success"
+   }
+   ```
+
+**查询当前用户日程列表操作流程**
+1. 获取到userID
+2. 调用`ScheduleUtil.getScheduleList(userID: String):List<Schedule>`接口
+3. 得到调用结果，返回给前端绘制日程列表
+
+- 传递json格式示例：
+  ```json
+   "code": 200,
+   "msg": "success",
+   "data": [
+        {
+            "scheduleID": "123456",
+            "scheduleName": "计算机网络",
+            "scheduleTime": {
+                  "startTime": "2020-12-12 12:12",
+                  "endTime": "2020-12-12 15:12"
+               },
+            "scheduleContent": "计网作业",
+            "scheduleType": "学习",
+            "scheduleStatus": "未完成"
+        },
+        {
+            "scheduleID": "111132",
+            "scheduleName": "计算机系统结构",
+            "scheduleTime": {
+                  "startTime": "2020-11-11 13:00",
+                  "endTime": "2020-12-12 15:00"
+               },
+            "scheduleContent": "计网作业",
+            "scheduleType": "学习",
+            "scheduleStatus": "未完成"
+        }
+    ]
+
+  ```
 
 ## 3. 设计机制
 
