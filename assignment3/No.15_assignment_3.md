@@ -6,7 +6,36 @@
 
 ### 1.1. 设计进展
 
+在上一次的分析模型中，我们着重分析了`MindMeet`的系统架构以及用例类图和序列图，在这一次的设计模型中，我们将着重根据具体的平台框架，设计每个子系统和功能的具体实现。截止到目前，我们已经完成的工作有：
 
+1. `MindMeet`的用例分析
+2. `MindMeet`功能设计
+3. `MindMeet`的系统架构划分
+4. `MindMeet`的子系统划分
+5. `MindMeet`子系统接口设计
+6. `MindMeet`平台框架技术栈选择
+7. `MindMeet`数据持久化，好友私聊设计机制实现
+8. `MindMeet`日程规划，专注模式用例具体实现
+9. `MindMeet`UI原型设计
+
+以下是涉及到的专业术语
+
+|   术语   |                             解释                             |
+| :------: | :----------------------------------------------------------: |
+| MindMeet |      本软件的名称，意为促进思想交流和分享的时间管理平台      |
+|   SRS    |  软件需求规格说明书（Software Requirements Specification）   |
+|    UI    |                  用户界面（User Interface）                  |
+|   API    |      应用程序接口（Application Programming Interface）       |
+|  日程表  |                    用来记录用户日程的对象                    |
+|  交流圈  | 用户可以在其中分享专注记录与日程表，同时对他人的分享进行评论 |
+|  自习室  |     用户可以创建、加入的虚拟自习空间，用于自习和共同学习     |
+|  专注力  |         集中注意力于特定任务或活动，而不受干扰或分心         |
+| 专注模式 |                用户使用软件进行专注的软件状态                |
+| 任务管理 |         通过记录、安排和跟踪任务来有效管理时间和工作         |
+| 日程安排 |             通过创建和管理日程表来安排和规划时间             |
+| 记录跟踪 |         记录专注记录用于评估时间使用情况和提高生产力         |
+|  悄悄话  |                     好友间私聊，交流学习                     |
+| 计划借鉴 | 指用户将导入他人分享的日程表导入自己的日程，一般用于用户像有相关经验用户借鉴学习日程安排 |
 
 ### 1.2. 平台框架
 
@@ -35,7 +64,7 @@
 
 上次作业的系统架构分析中,我们注重于系统的功能划分,这次我们将更加注重于系统有关平台的依赖架构，平台依赖的系统架构如下图所示：
 
-![platform-architecture.drawio](https://raw.githubusercontent.com/luxingzhi27/picture/main/platform-architecture.drawio.png)
+![platform-architecture](https://raw.githubusercontent.com/luxingzhi27/picture/main/platform-architecture.png) 
 
 我们采用C/S架构设计，客户端使用`Android SDK`相关api绘制界面，应用逻辑层中四个子系统，调用`Android SDK`相关api进行逻辑操作，比如禁用通知，音频播放等功能。
 
@@ -148,49 +177,49 @@
 
 以上接口所对应返回的json信息格式如下：
 - 001：
-```json
-{
-    "code": 200,
-    "msg": "success",
-    "data": {
-        "userID": "123456",
-        "userName": "张三",
-        "userAvatar": "http://xxx.com/xxx.jpg",
+    ```json
+    {
+        "code": 200,
+        "msg": "success",
+        "data": {
+            "userID": "123456",
+            "userName": "张三",
+            "userAvatar": "http://xxx.com/xxx.jpg",
+        }
     }
-}
-```
+    ```
 
 - 002:
-```json
-{
-    "code": 200,
-    "msg": "success",
-    "data": [
-        {
-            "scheduleID": "123456",
-            "scheduleName": "计算机网络",
-            "scheduleTime": {
-                  "startTime": "2020-12-12 12:12",
-                  "endTime": "2020-12-12 15:12"
-               },
-            "scheduleContent": "计网作业",
-            "scheduleType": "学习",
-            "scheduleStatus": "未完成"
-        },
-        {
-            "scheduleID": "111132",
-            "scheduleName": "计算机系统结构",
-            "scheduleTime": {
-                  "startTime": "2020-11-11 13:00",
-                  "endTime": "2020-12-12 15:00"
-               },
-            "scheduleContent": "计网作业",
-            "scheduleType": "学习",
-            "scheduleStatus": "未完成"
-        }
-    ]
-}
-```
+    ```json
+    {
+        "code": 200,
+        "msg": "success",
+        "data": [
+            {
+                "scheduleID": "123456",
+                "scheduleName": "计算机网络",
+                "scheduleTime": {
+                      "startTime": "2020-12-12 12:12",
+                      "endTime": "2020-12-12 15:12"
+                   },
+                "scheduleContent": "计网作业",
+                "scheduleType": "学习",
+                "scheduleStatus": "未完成"
+            },
+            {
+                "scheduleID": "111132",
+                "scheduleName": "计算机系统结构",
+                "scheduleTime": {
+                      "startTime": "2020-11-11 13:00",
+                      "endTime": "2020-12-12 15:00"
+                   },
+                "scheduleContent": "系统结构`作业",
+                "scheduleType": "学习",
+                "scheduleStatus": "未完成"
+            }
+        ]
+    }	
+    ```
 - 003:
   ```json
   {
@@ -273,13 +302,13 @@
 | Return       | bool                                                 |
 | Introduction | 此接口使用户删除日程，返回删除结果                   |
 
-| 编号         | 004                                               |
-| :----------- | :------------------------------------------------ |
-| REST API     | GET api/schedule/?scheduleID=id                   |
-| Interface    | ScheduleUtil.getSchedule(scheduleID: String):bool |
-| Arguement    | scheduleID: String                                |
-| Return       | bool                                              |
-| Introduction | 此接口通过scheduleID查询用户日程的详细信息        |
+| 编号         | 004                                                   |
+| :----------- | :---------------------------------------------------- |
+| REST API     | GET api/schedule/?scheduleID=id                       |
+| Interface    | ScheduleUtil.getSchedule(scheduleID: String):Schedule |
+| Arguement    | scheduleID: String                                    |
+| Return       | Schedule                                              |
+| Introduction | 此接口通过scheduleID查询用户日程的详细信息            |
 
 
 | 编号         | 005                                                         |
@@ -356,39 +385,40 @@
    ```
 
 **查询当前用户日程列表操作流程**
-1. 获取到userID
+1. 用户登陆后获取到userID
 2. 调用`ScheduleUtil.getScheduleList(userID: String):List<Schedule>`接口
 3. 得到调用结果，返回给前端绘制日程列表
 
 - 传递json格式示例：
   ```json
-   "code": 200,
-   "msg": "success",
-   "data": [
-        {
-            "scheduleID": "123456",
-            "scheduleName": "计算机网络",
-            "scheduleTime": {
-                  "startTime": "2020-12-12 12:12",
-                  "endTime": "2020-12-12 15:12"
-               },
-            "scheduleContent": "计网作业",
-            "scheduleType": "学习",
-            "scheduleStatus": "未完成"
-        },
-        {
-            "scheduleID": "111132",
-            "scheduleName": "计算机系统结构",
-            "scheduleTime": {
-                  "startTime": "2020-11-11 13:00",
-                  "endTime": "2020-12-12 15:00"
-               },
-            "scheduleContent": "计网作业",
-            "scheduleType": "学习",
-            "scheduleStatus": "未完成"
-        }
-    ]
-  
+   {
+		"code": 200,
+   	"msg": "success",
+       "data": [
+            {
+                "scheduleID": "123456",
+                "scheduleName": "计算机网络",
+                "scheduleTime": {
+                      "startTime": "2020-12-12 12:12",
+                      "endTime": "2020-12-12 15:12"
+                   },
+                "scheduleContent": "计网作业",
+                "scheduleType": "学习",
+                "scheduleStatus": "未完成"
+            },
+            {
+                "scheduleID": "111132",
+                "scheduleName": "计算机系统结构",
+                "scheduleTime": {
+                      "startTime": "2020-11-11 13:00",
+                      "endTime": "2020-12-12 15:00"
+                   },
+                "scheduleContent": "系统结构作业",
+                "scheduleType": "学习",
+                "scheduleStatus": "未完成"
+            }
+        ]
+   }
   ```
 
 ## 3. 设计机制
@@ -397,7 +427,7 @@
 
 ### 3.1. 数据持久机制
 
-#### 分析机制：
+#### 分析机制
 
 我们的MindMeet具有好友私聊和日程分享功能，随着时间的推移和用户量的增长，系统将持有大量的数据信息，如好友的聊天记录、用户的日程记录。通过将数据存储在共享的持久介质中，多个应用程序或用户可以共享和访问相同的数据。这种共享和协作可以实现数据的一致性和互操作性，促进不同系统之间的数据交换和集成。
 
@@ -425,11 +455,11 @@
 
 ![data-persitence](https://raw.githubusercontent.com/luxingzhi27/picture/main/data-persitence.png)
 
-#### 实现机制：
+#### 实现机制
 
 ​		现在有了数据持久层的分析机制(analysis mechanism)，于此将采用MyBatis做为其的实现机制(design mechanism)。
 
-##### 什么是MyBatis?
+##### MyBatis基本概念
 
 1. MyBatis是一个半ORM（对象关系映射）框架，它内部封装了JDBC，开发时只需要关注SQL语句本身，不需要花费精力去处理加载驱动、创建连接、创建statement等繁杂的过程。程序员直接编写原生态sql，可以严格控制sql执行性能，灵活度高。
 
@@ -470,9 +500,9 @@ MyBatis的工作原理如下图所示：
 7. 输入参数映射。输入参数类型可以是Map、List等集合类型，也可以是基本数据类型和POJO类型。输入参数映射过程类似于JDBC对preparedStatement对象设置参数的过程。
 8. 输出结果映射。输出结果类型可以是Map、List等集合类型，也可以是基本数据类型和POJO类型。输出结果映射过程类似于JDBC对结果集的解析过程。
 
-### 3.2.好友私聊机制
+### 3.2. 好友私聊机制
 
-#### 分析机制：
+#### 分析机制
 
 MindMeet用于基础的信息交流功能，发送文字、表情，分享日程等。不像登录信息这种不需要很频繁或仅获取一次的数据，好友通讯需要我们通过网络传输的实时更新或连续数据流。信息传输需要具有可靠性和稳定性：信息传输应该是可靠和稳定的，确保信息能够有效地传递到目标地点。使用可靠的网络和通信设备，实施错误检测和纠正机制，以确保数据的准确性和完整性。
 
@@ -491,9 +521,9 @@ MindMeet用于基础的信息交流功能，发送文字、表情，分享日程
 | 简单的RESTful应用              | 实时应用程序       |
 | 只想获取一次数据供应用程序使用 | 经常更新的应用程序 |
 
-#### 实现机制：
+#### 实现机制
 
-##### 什么是WebSocket？
+##### WebSocket基本概念
 
 WebSocket是一种基于TCP的通信协议，它提供了全双工、持久化的连接，允许在客户端和服务器之间进行实时的双向通信。WebSocket 的实现分为客户端和服务端两部分，客户端（通常为浏览器）发出 WebSocket 连接请求，服务端响应，实现类似 TCP 握手的动作，从而在浏览器客户端和 WebSocket 服务端之间形成一条 HTTP 长连接快速通道。两者之间后续进行直接的数据互相传送，不再需要发起连接和相应。
 
