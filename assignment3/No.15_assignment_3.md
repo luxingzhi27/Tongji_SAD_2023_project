@@ -582,7 +582,7 @@ WebSocket的流程简单来说就是建立连接、进行双向通信、保持�
 2. `MindMeet`不存在需要单独部署的服务，每项功能都是相互配合的，因此不需要采用微服务架构。
 3. 采用分层架构，`MindMeet`可以将前端和后端分离，前端和后端可以独立开发，前端和后端之间通过接口进行通信，前端和后端的耦合度较低，易于维护和扩展。
 
-### 5.2 设计模式
+### 5.2 关键决斗与设计模式
 
 #### 5.2.1 前端设计模式
 
@@ -601,17 +601,194 @@ WebSocket的流程简单来说就是建立连接、进行双向通信、保持�
 
 **MVP示例**
 
-
 #### 5.5.2 后端设计模式
 
-
-
+1. 采用调用返回
 
 
 
 
 
 ## 6. 原型进展
+
+### 6.1 数据可视化实现
+
+数据可视化部分使用开源框架`Apache ECharts`实现，由于该技术是在web平台中应用，应用到安卓平台上需要使用安卓的`webview`组件，通过`Gson`解析json文件，在后端与前端`webview`中传递专注数据。完整实现数据可视化功能步骤如下：
+
+1. 添加所需依赖库
+
+   在项目`build.gradle`文件中添加：
+
+   ```gradle
+   implementation 'com.github.abel533':ECharts:3.0.0.2
+   implementation files('libs/gson-2.8.0.jar')
+   ```
+
+2. 导入`ECharts`
+
+   到[ECharts官方网站](https://echarts.apache.org/zh/download.html)选择在线定制所需图表类型，定制完成后下载所得到`echarts.min.js`文件添加到项目`app/src/main/assets/js`文件夹中。
+
+   ![](https://raw.githubusercontent.com/luxingzhi27/picture/main/Screenshot_20230617_185555.png)
+
+3. 编写`webview`所需`html`文件
+
+   在`app/src/main/assets`文件夹下新建`index.html`，内容如下：
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width,initial-scale=1.0">
+       <title>Document</title>
+   </head>
+   
+   <body style="height: 100%;margin: 0">
+       <h1>
+           专注统计
+       </h1>
+       <div id="main" style="height: 300%"></div>
+       <script type="text/javascript" src="./js/echarts.min.js"></script>
+       <script type="text/javascript">
+           // 基于准备好的dom，初始化echarts实例
+           var dom = document.getElementById("main")
+           var myChart = echarts.init(dom);
+           var app = {};
+           function loadEcharts(echartJson) {
+               var option = JSON.parse(echartJson);
+               if (option && typeof option === "object") {
+                   myChart.setOption(option, true);
+               }
+           }
+       </script>
+   </body>
+   
+   </html>
+   ```
+
+4. 创建`EchartsView`用于展示数据可视化图表
+
+   ```java
+   package com.luxingzhi27.myapplication;
+   
+   import android.annotation.SuppressLint;
+   import android.content.Context;
+   import android.util.AttributeSet;
+   import android.webkit.WebSettings;
+   import android.webkit.WebView;
+   
+   import com.github.abel533.echarts.json.GsonOption;
+   
+   public class EchartView extends WebView {
+       private static final String TAG = EchartView.class.getSimpleName();
+   
+       public EchartView(Context context) {
+           this(context, null);
+       }
+   
+       public EchartView(Context context, AttributeSet attrs) {
+           this(context, attrs, 0);
+       }
+   
+       public EchartView(Context context, AttributeSet attrs, int defStyleAttr) {
+           super(context, attrs, defStyleAttr);
+           init();
+       }
+   
+       @SuppressLint("SetJavaScriptEnabled")
+       private void init() {
+           WebSettings webSettings = getSettings();
+           webSettings.setJavaScriptEnabled(true);
+           webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
+           webSettings.setSupportZoom(false);
+           webSettings.setAllowContentAccess(true);
+           webSettings.setAllowFileAccess(true);
+           webSettings.setDisplayZoomControls(false);
+           loadUrl("file:///android_asset/index.html");
+       }
+   
+       /**刷新图表
+        *      * java调用js的loadEcharts方法刷新echart
+        *      * 不能在第一时间就用此方法来显示图表，因为第一时间html的标签还未加载完成，不能获取到标签值
+        *      * @param option
+        */
+       public void refreshEchartsWithOption(GsonOption option) {
+           if (option == null) {
+               return;
+           }
+           String optionString = option.toString();
+           String call = "javascript:loadEcharts('" + optionString + "')";
+           loadUrl(call);
+       }
+   }
+   ```
+
+5. 创建` EchartOptionUtil`处理数据json构建
+
+   ```java
+   package com.luxingzhi27.myapplication;
+   
+   import com.github.abel533.echarts.axis.Axis;
+   import com.github.abel533.echarts.axis.CategoryAxis;
+   import com.github.abel533.echarts.axis.ValueAxis;
+   import com.github.abel533.echarts.code.Trigger;
+   import com.github.abel533.echarts.json.GsonOption;
+   import com.github.abel533.echarts.series.Bar;
+   import com.github.abel533.echarts.series.Line;
+   
+   import java.util.ArrayList;
+   import java.util.List;
+   
+   public class EchartOptionUtil {
+   
+       public static GsonOption getWeekFocusLineChartOption(Object[] dayFocusTime ) {
+           GsonOption option = new GsonOption();
+           option.title("一周专注情况");
+           option.legend("时长/小时");
+           option.tooltip().trigger(Trigger.axis);
+   
+           Object[] xAxis = new Object[]{
+                   "周一", "周二", "周三", "周四", "周五", "周六", "周日"
+           };
+   
+           ValueAxis valueAxis = new ValueAxis();
+           option.yAxis(valueAxis);
+   
+           CategoryAxis categorxAxis = new CategoryAxis();
+           categorxAxis.axisLine().onZero(false);
+           categorxAxis.boundaryGap(true);
+           categorxAxis.data(xAxis);
+           option.xAxis(categorxAxis);
+   
+           Bar bar = new Bar();
+           bar.name("专注时长").data(dayFocusTime).itemStyle().normal();
+           option.series(bar);
+   
+           return option;
+       }
+   }
+   ```
+
+6. 传入专注时长，调用刷新图表
+
+   ```java
+   private void refreshLineChart(){
+           Object[] dayFocusTime= new Object[]{
+                   (int)(Math.random()*5+1),(int)(Math.random()*5+1),(int)(Math.random()*5+1),(int)(Math.random()*5+1),
+                   (int)(Math.random()*5+1),(int)(Math.random()*5+1),(int)(Math.random()*5+1)
+           };
+           lineChart.refreshEchartsWithOption(EchartOptionUtil.getWeekFocusLineChartOption(dayFocusTime));
+       }
+   ```
+
+显示结果：
+
+![image-20230619163325901](https://raw.githubusercontent.com/luxingzhi27/picture/main/image-20230619163325901.png)
+
+### 6.2 UI改进
+
+
 
 ## 7. 存在的问题
 
